@@ -13,7 +13,9 @@ If Google Drive shows a warning that the file is suspicious, you can safely igno
 
 📲 Download My Smart Calculator App Now!  
 🚀 Experience real-time calculations with a smooth UI.  
-📥 [Download APK](YOUR_DRIVE_LINK_HERE)  
+📥 [Download APK](https://drive.google.com/file/d/1GDTwyS3ZNTUYJz45YYSjktymFxkE-oqV/view?usp=sharing)
+                 (or)
+📥 [Download APK](https://github.com/HemanthsaiBurla/Calculator_Android_Application-APK/tree/main/APK_folder)
 
 #### Suggestion: Please use this application in Full Screen Mode in phone 📲📱
 

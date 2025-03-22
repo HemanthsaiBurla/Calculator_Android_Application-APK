@@ -14,6 +14,9 @@ If Google Drive shows a warning that the file is suspicious, you can safely igno
 📲 Download My Smart Calculator App Now!  
 🚀 Experience real-time calculations with a smooth UI.  
 📥 [Download APK](https://www.dropbox.com/scl/fi/9p7g3xt0gjjux7bdsjznh/Calculator.apk?rlkey=abpkwk2ndh01px8yr17s9me09&st=nnfalknk&dl=1)
+<br>
+(if above link not works)
+<br>
 📥 [Download APK](https://www.dropbox.com/scl/fi/9p7g3xt0gjjux7bdsjznh/Calculator.apk?rlkey=abpkwk2ndh01px8yr17s9me09&st=9o8ef3dc&dl=1)
 <br>
                  (or)

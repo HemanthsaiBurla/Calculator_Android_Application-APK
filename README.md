@@ -23,7 +23,7 @@ If Google Drive shows a warning that the file is suspicious, you can safely igno
 ✅ Real-Time Calculations – No need to press "="; results update as you type!
 ✅ Smooth UI & Optimized Performance – No block collisions on different screen sizes.
 ✅ History Management – Stores up to 100 previous calculations, easily adjustable in JS.
-✅ Dark Mode Support – For comfortable usage in low light.
+✅ Dark Mode Support* – For comfortable usage in low light(enable dark mode in your phone).
 ✅ Auto-Adjust Screen Ratio – Works flawlessly on all screen sizes, including tablets.
 ✅ Smart Copy Functionality – Users can only copy relevant data (results & input).
 ✅ Navigation Fixes – Solved back stack issues for better in-app movement.

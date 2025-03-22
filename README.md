@@ -11,8 +11,9 @@
 ## Try my Android Calculator Application in your Phone
 If Google Drive shows a warning that the file is suspicious, you can safely ignore it and proceed with the download.
 
-🚀 Live APK
-[Check out the live Calculator Android App(Apk)](https://drive.google.com/file/d/1cFV7EgeJrn0cFlw9plFmMYdL1qp8UBIw/view?usp=sharing)
+📲 Download My Smart Calculator App Now!  
+🚀 Experience real-time calculations with a smooth UI.  
+📥 [Download APK](YOUR_DRIVE_LINK_HERE)  
 
 #### Suggestion: Please use this application in Full Screen Mode in phone 📲📱
 

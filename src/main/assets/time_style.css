@@ -1,0 +1,179 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main Container (Home Screen) */
+.calculator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: rgb(247.5, 247.5, 247.5);
+    padding: 30px;
+    justify-content: flex-end; /* Ensures buttons start from the bottom */
+}
+
+/* Screen Display */
+.calculator-screen {
+    width: 100%;
+    height: 70px;
+    font-size: 2rem;
+    text-align: right;
+    border-radius: 10px;
+    padding-right: 0px;
+    border: none;
+    background: transparent;
+    margin-bottom: 10px;
+}
+
+/* Total Display */
+.total {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: right;
+    width: 100%;
+    padding: 0px;
+    background: transparent;
+    border-radius: 8px;
+    outline: none;
+    border: 1px solid transparent;
+    margin-bottom: 20px;
+}
+
+/* Switch Container */
+.switch-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Switch Button */
+#switch-btn {
+    width: 78px;
+    padding: 0px 25px;
+    height: 40px;
+    background-color: #ff9800;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: 16px;
+}
+
+/* Calculator Keys */
+.calculator-keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    width: 100%;
+
+}
+
+/* Generic Button Styling */
+button {
+    height: 60px;
+    font-size: 1.5rem;
+    border: none;
+    cursor: pointer;
+    background-color: #e0e1e6;
+    border-radius: 16px;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Button Hover Effect */
+button:hover {
+    transform: scale(1.05);
+}
+
+/* Button Active Effect */
+button:active {
+    transform: scale(0.95);
+}
+
+/* Operator Buttons */
+button#convert-btn,
+button#backspace {
+    background-color: #ff9800;
+    color: white;
+}
+
+/* Clear Button */
+#clear {
+    grid-row: span 2;
+    height: 130px;
+    background-color: #f44336;
+    color: white;
+}
+
+/* Backspace Button */
+#backspace {
+    grid-row: span 2;
+    height: 130px;
+}
+
+.calculator h1 {
+    position: absolute;
+    top: 100px; /* Moves it 200px above the calculator screen */
+    left: 50%;
+    transform: translateX(-50%); /* Centers it horizontally */
+    font-size: 2rem;
+    text-align: center;
+    width: 100%;
+}
+
+/* Back Button Styling */
+.back-button {
+    position: fixed;        /* Keeps the button fixed on the viewport */
+    top: 6vh;               /* Consistent position from the top */
+    left: 22px;             /* Consistent position from the left */
+    background: rgb(247.5, 247.5, 247.5);
+    font-size: 2rem;
+    border: none;
+    height: 50px;
+    width: 50px;
+    font-size: 2rem;
+    font-weight: bold;
+    padding-right: 55px;
+    border-radius: 30%;
+    cursor: pointer;
+    user-select: none;
+    z-index: 9999;          /* Very high to stay on top of all elements */
+}
+
+
+/* Responsive for Small Screens */
+@media (max-width: 450px) {
+
+    .calculator h1 {
+        font-size: 2.0rem; /* Reduce size for smaller screens */
+        top: 100px; /* Adjust position */
+    }
+
+    .calculator-screen {
+        height: 60px;
+        font-size: 2.3rem;
+        margin-bottom: 10px; /*gap between total  and calcualtor screen bolck to move up or down */
+    }
+    .total {
+        font-size: 1.5rem;
+        /* font-weight: bold; */
+        margin-bottom: 10px;
+    }
+    .switch-container {
+        margin-bottom: 10px;
+    }
+    .calculator-keys button {
+        height: 60px;
+        font-size: 1.5rem;
+    }
+    .calculator-keys {
+        gap: 10px;
+    }
+}

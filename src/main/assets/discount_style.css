@@ -1,0 +1,175 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+
+
+/* Main Calculator Container */
+.calculator {
+    width: 100vw;
+    height: 100vh;
+    padding: 30px;
+    border-radius: 0;
+    background: #f7f7f7;
+    display: flex;
+    /* font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif; */
+
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Heading Style */
+h2 {
+    margin-top: 10px;
+    font-size: 1.8rem;
+    color: #333;
+}
+
+/* Input Container */
+.input-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+/* Screen and Total Display */
+.calculator-screen, .total {
+    width: 58%;
+    height: 50px;
+    font-size: 1.5rem;
+    /* margin-bottom: 50px; */
+
+    text-align: right;
+    padding-right: 12px;
+    border-radius: 14px;
+    border: 1px solid #ccc;
+    background: #fff;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Total Display Styling */
+.total {
+    background: #e9e9e9;
+    color: #333;
+    font-weight: bold;
+    line-height: 50px;
+}
+
+/* Save Message */
+.save-message {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #d32f2f;
+}
+
+/* Calculator Keys Grid */
+.calculator-keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    width: 100%;
+
+}
+
+/* Generic Button Styling */
+button {
+    height: 60px;
+    font-size: 1.5rem;
+    border: none;
+    cursor: pointer;
+    background-color: #e0e1e6;
+    border-radius: 16px;
+    transition: transform 0.2s ease-in-out, background-color 0.2s;
+}
+
+/* Button Hover Effect */
+button:hover {
+    transform: scale(1.05);
+    background-color: #d0d1d6;
+}
+
+/* Button Active Effect */
+button:active {
+    transform: scale(0.95);
+}
+
+/* Convert and Backspace Buttons */
+#backspace, #clear {
+    grid-row: span 2;
+    height: 130px;
+}
+
+/* Clear Button Styling */
+#clear {
+    background-color: #f44336;
+    color: white;
+    height: 130px;
+}
+
+/* Backspace Button Styling */
+#backspace {
+    background-color: #ff9800;
+    color: white;
+    height: 130px;
+}
+
+/* Back Button Styling */
+.back-button {
+    position: fixed;        /* Keeps the button fixed on the viewport */
+    top: 6vh;               /* Consistent position from the top */
+    left: 22px;             /* Consistent position from the left */
+    background: transparent;
+    font-size: 2rem;
+    font-weight: bold;
+    border: none;
+    height: 50px;
+    width: 50px;
+    font-size: 2rem;
+    padding-right: 55px;
+    border-radius: 30%;
+    cursor: pointer;
+    z-index: 9999;          /* Very high to stay on top of all elements */
+}
+
+h1 {
+
+    text-align: center;
+    width: 100%;
+    margin-top: 60px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 450px) {
+    .calculator-screen, .total {
+        font-size: 1.2rem;
+    }
+    h1{
+        text-align: center;
+        margin-top: 71.5px;    }
+
+    button {
+        font-size: 1.5rem;
+        height: 60px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+/* Disable Text Selection */
+.calculator-keys button {
+    user-select: none;       /* Disables text selection */
+    -webkit-user-select: none; /* For Safari */
+    -ms-user-select: none;     /* For IE/Edge */
+}

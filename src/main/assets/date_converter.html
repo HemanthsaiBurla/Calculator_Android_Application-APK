@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Date Converter</title>
+    <link rel="stylesheet" href="date_style.css">
+</head>
+<body>
+<div class="date-container">
+
+    <div class="header">
+        <button onclick="goBack()" class="back-button" title="Back">←</button>
+    </div>
+
+    <h1 id="hdate" style="text-align: center; user-select: none;">Date/Age</h1>
+
+    <div class="date-inputsf">
+        <label style="user-select: none;">From/DOB</label>
+        <input style="box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);" type="date" id="fromDate" onchange="calculateDifference()">
+    </div>
+
+    <div class="date-inputst">
+        <label style="user-select: none;">To/Now</label>
+
+        <input style="box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);" type="date" id="toDate" onchange="calculateDifference()">
+    </div>
+
+    <div class="difference-box">
+        <h3 style="user-select: none">Difference/Age</h3>
+        <div class="diff-values">
+            <div>
+                <h4>Years</h4>
+                <p id="years">0</p>
+            </div>
+            <div>
+                <h4>Months</h4>
+                <p id="months">0</p>
+            </div>
+            <div>
+                <h4>Days</h4>
+                <p id="days">0</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-section" style="margin-bottom: 100px;">
+        <div style="margin-bottom: 20px; height: 30px;" >
+            <h4>From</h4>
+            <p id="fromDateDisplay">-</p>
+        </div>
+        <div style="margin-bottom: 20px; height: 30px;" >
+            <h4>To</h4>
+            <p id="toDateDisplay">-</p>
+        </div>
+    </div>
+
+
+</div>
+
+<script src="date_script.js"></script>
+</body>
+</html>

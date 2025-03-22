@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cu;
+}
+
+/* Calculator Main Screen */
+.calculator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: rgb(247.5, 247.5, 247.5);
+    padding: 30px;
+    justify-content: flex-end; /* Ensures buttons start from the bottom */
+}
+
+/* Wrapper to Control Layout */
+.calculator-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    justify-content: flex-end; /* Push buttons to bottom */
+}
+
+/* Calculator Screen */
+.calculator-screen {
+    width: 100%;
+    height: 70px;
+    font-size: 2rem;
+    text-align: right;
+    border-radius: 10px;
+    padding-right: 0px;
+    border: none;
+    background: transparent;
+    margin-bottom: 10px;
+}
+
+/* Total Result Display */
+#result {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: right;
+    width: 100%;
+    padding: 0px;
+    background: transparent;
+    border-radius: 8px;
+    outline: none;
+    border: 1px solid transparent;
+    margin-bottom: 30px; /* Fixed 30px gap above numerics */
+}
+
+/* Calculator Buttons */
+.calculator-keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 60px; /* Ensures equal row height */
+    gap: 10px; /* Uniform 5px spacing */
+    width: 100%;
+    justify-content: center;
+}
+
+.calculator-keys button {
+    font-size: 1.5rem;
+    border: none;
+    cursor: pointer;
+    background-color: #e0e1e6;
+    border-radius: 16px;
+    transition: transform 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0; /* Removes unnecessary padding */
+    height: 100%; /* Makes sure buttons stretch properly */
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* Operator Buttons */
+button.operator, button#equals, #converter-btn {
+    background-color: #ff9800;
+    color: white;
+    font-size: 1.3rem;
+}
+
+button#clear {
+    background-color: #f44336;
+    color: white;
+
+}
+#clear-history-btn {
+    background-color: #f44336;
+    color: white;
+    display: none; /* Hides the button initially */
+}
+
+.calculator h1 {
+    position: absolute;
+    top: 100px; /* Moves it 200px above the calculator screen */
+    left: 50%;
+    transform: translateX(-50%); /* Centers it horizontally */
+    font-size: 2rem;
+    text-align: center;
+    width: 100%;
+}
+
+#history-btn {
+    position: absolute;
+    top: 160px;  /* to increse the gap between form top and calculator heading */
+    right: 50px;  /* Sticks to right side */
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #4caf50;
+    border-radius: 12px;
+    border: none;
+}
+
+
+
+
+#history-box {
+    display: none;
+    position: absolute; /* Positions it above other elements */
+    top: 200px; /* To move the history box from history button , to move up or down */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 87%;
+    max-height: 100px;
+    background: #eee;
+    padding: 10px;
+    border-radius: 10px;
+    overflow-y: auto;
+    z-index: 5; /* Ensures it's below the heading */
+}
+
+
+
+/* Clear History Button */
+#clear-history-btn {
+    width: auto;
+    padding: 10px 15px;
+    top: 293px;
+    left: 26px;  /* Sticks to right side */
+    position: fixed; /* Ensures it stays on top */
+    z-index: 9999;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    height: 40px;
+    display: none; /* Initially hidden */
+    margin-top: 10px; /* Adds spacing below history container */
+}
+
+
+/* History Section */
+.history-container {
+    top: calc(100% + 20px); /* Below calculator screen */
+    right: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+}
+
+
+
+
+
+
+
+/* Responsive Design */
+@media (max-width: 450px) { /* iPhone SE & smaller screens */
+    .calculator-keys {
+        gap: 10px;
+    }
+    .calculator h1 {
+        font-size: 2.0rem; /* Reduce size for smaller screens */
+        top: 100px; /* Adjust position */
+    }
+
+    button {
+        font-size: 1.3rem;
+    }
+
+    .calculator-screen {
+        height: 60px;
+        font-size: 2.3rem;
+        margin-bottom: 20px; /*gap between total  and calcualtor screen bolck to move up or down */
+    }
+
+    #result {
+        font-size: 1.5rem;
+        margin-bottom: 20px; /*gap between total and numerics bolck to move up or down */
+    }
+
+    #history-btn {
+        margin-right: -25px;
+        font-size: 1rem; /* Reduce button size */
+        padding: 8px 12px;
+    }
+
+    #history-box {
+        height: auto;
+        bottom: 210px;
+    }
+
+    #clear-history-btn {
+        font-size: 1rem;
+        padding: 8px 12px;
+        margin-bottom: 50px;
+
+    }
+
+}
+
+@media (min-width: 500px) and (max-width: 1000px) { /* iPhone 14 Pro Max & Tablets */
+    .calculator h1 {
+        font-size: 1.8rem;
+        top: 100px; /* Adjust spacing */
+    }
+    #result {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+    #history-btn {
+        margin-bottom: -100px; /* Adjust position */
+        font-size: 1.2rem;
+
+    }
+
+
+
+    #clear-history-btn {
+        font-size: 1.1rem;
+    }
+
+
+
+
+    #history-box {
+        max-height: 110px;
+        bottom: 210px;
+    }
+
+    #clear-history-btn {
+        font-size: 1.1rem;
+    }
+}

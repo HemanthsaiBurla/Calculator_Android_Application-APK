@@ -1,0 +1,155 @@
+/* Reset and base styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main container */
+.date-container {
+    height: 100vh;
+    background: rgb(247.5, 247.5, 247.5);
+    width: 100vw;
+    min-height: 100vh;
+    padding: 30px;
+    display: flex;
+    font-size: 1.1rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Adds spacing between elements */
+}
+
+/* Back Button Styling */
+.back-button {
+    position: fixed;
+    top: 6vh;
+    left: 16px;
+    background: rgb(247.5, 247.5, 247.5);
+    font-size: 2rem;
+    font-weight: bold;
+    border: none;
+    height: 50px;
+    width: 50px;
+    font-size: 2rem;
+    border-radius: 30%;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+/* Heading */
+#hdate {
+    font-size: 2rem;
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Input Sections */
+.date-inputs {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    gap: 15px;
+}
+
+.date-inputs label {
+    font-size: 1rem;
+    color: #333;
+}
+
+.date-inputsf input,
+.date-inputst input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 14px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 1rem;
+}
+
+/* Difference Box */
+.difference-box {
+    width: 100%;
+    max-width: 400px;
+    padding: 15px;
+    border-radius: 14px;
+    background: #ffedd1;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Difference values */
+.diff-values {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.diff-values div {
+    width: 33%;
+    text-align: center;
+}
+
+/* Bottom section */
+.bottom-section {
+    display: flex;
+    justify-content: space-between;
+    align-items:first baseline;
+    width: 100%;
+    padding: 5px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+}
+.bottom-section div {
+    flex: 1;
+    text-align: center;
+}
+
+/* Responsive Fixes */
+@media (max-width: 450px) {
+
+
+    #hdate {
+        font-size: 2.0rem;
+        margin-top: 60px;
+    }
+
+    .date-inputsf{
+        width: 100%;
+        max-width: 100%;
+        margin-top: 120px; /* change to up or down for blocks*/
+    }
+
+
+    .date-inputst {
+        width: 100%;
+        max-width: 100%;
+        /* margin-bottom: 100px; */
+    }
+
+    .bottom-section {
+
+            gap: 60px;
+            padding: 30px; /*To increase the box size (bottom) */
+            margin-top: 0px; /* Gap to move entire box up or down*/
+            font-size: 1rem;
+            padding-top: 5px;  /* To up or down the text which is in bottom section like From and To*/
+
+        }
+
+        .diff-values {
+            flex-direction: row;
+            gap: 20px;
+            padding: 20px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+
+        }
+}
